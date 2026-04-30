@@ -1,6 +1,6 @@
 // app/controllers/userController.js
 const User = require('../models/userModel');
-exports.home = (req, res) => {
+exports.home = (req, res) => { //request ciò che viene inviato dal form response cio' che viene ritornato dalla chiamata
   res.render('index');
 };
 exports.listUsers = (req, res) => {
@@ -13,7 +13,7 @@ exports.createUser = (req, res) => {
   res.redirect('/users');
 };
 exports.deleteUser = (req, res) => {
-  const { id } = req.params;
+  const { id } = req.params; //parametri url poi da li tolgo id, :id in routes 
   User.delete(id);
   res.redirect('/users');
 };

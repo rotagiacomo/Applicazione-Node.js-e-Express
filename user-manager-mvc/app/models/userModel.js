@@ -1,6 +1,6 @@
 // app/models/userModel.js
 let users = [];
-const User = {
+const Una = {
   findAll: () => users,
   create: (name, email, imgLink) => {
     const newUser = { id: Date.now(), name, email, imgLink };
@@ -12,4 +12,17 @@ const User = {
     users = users.filter(u => u.id !== parseInt(id));
   }
 };
+class User {
+  name;
+  email;
+  imgLink;
+
+  User(name, email, imgLink){
+    this.name = name;
+    this.email = email;
+    this.imgLink = imgLink;
+  }
+
+  
+}
 module.exports = User;
