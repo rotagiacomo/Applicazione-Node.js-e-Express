@@ -10,6 +10,14 @@ const User = {
   findById: (id) => users.find(u => u.id === parseInt(id)),
   delete: (id) => {
     users = users.filter(u => u.id !== parseInt(id));
+  },
+  addOne: (id) => {
+    for(let i = 0; i<users.length; i++){
+      if(users[i].id == parseInt(id)){
+        console.log(users[i].number);
+        users[i].number = users[i].number+1;
+      }
+    }
   }
 };
 module.exports = User;

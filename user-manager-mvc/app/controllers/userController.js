@@ -17,3 +17,8 @@ exports.deleteUser = (req, res) => {
   User.delete(id);
   res.redirect('/users');
 };
+exports.addOne = (req, res) => {
+  const { id } = req.params;
+  User.addOne(id);
+  res.redirect('/users');
+}

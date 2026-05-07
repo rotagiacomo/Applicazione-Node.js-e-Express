@@ -7,4 +7,5 @@ router.get('/', userController.home);
 router.get('/users', userController.listUsers);
 router.post('/users', userController.createUser); //richiamata dal controller che viene richiamato dal submit form della view
 router.post('/users/delete/:id', userController.deleteUser);
+router.post('/users/increment/:id', userController.addOne);
 module.exports = router;
