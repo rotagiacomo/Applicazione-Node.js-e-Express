@@ -21,4 +21,9 @@ exports.addOne = (req, res) => {
   const { id } = req.params;
   User.addOne(id);
   res.redirect('/users');
+};
+exports.removeOne = (req, res) => {
+  const { id } = req.params;
+  User.removeOne(id);
+  res.redirect('/users');
 }

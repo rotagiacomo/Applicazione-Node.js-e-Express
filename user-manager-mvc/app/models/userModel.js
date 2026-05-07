@@ -14,10 +14,19 @@ const User = {
   addOne: (id) => {
     for(let i = 0; i<users.length; i++){
       if(users[i].id == parseInt(id)){
-        console.log(users[i].number);
         users[i].number = users[i].number+1;
       }
     }
-  }
+  },
+  removeOne: (id) => {
+    for(let i=0; i<users.length; i++){
+      if(users[i].id == parseInt(id)){
+        number = users[i].number;
+        if(number > 0){
+          users[i].number = number-1;
+        }
+      }
+    }
+  },
 };
 module.exports = User;

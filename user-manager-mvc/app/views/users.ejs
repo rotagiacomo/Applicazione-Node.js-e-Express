@@ -18,8 +18,11 @@
         <form action="/users/delete/<%= user.id %>" method="POST" style="display:inline;">
           <button type="submit">Elimina</button>
         </form>
-        <form action="/users/increment/<%= user.id %>" method="POST" style="display: inline;">
+        <form action="/users/increment/<%= user.id %>" method="post" style="display: inline;">
           <button type="submit">Compra</button>
+        </form>
+        <form action="/users/decrement/<%= user.id %>" method="post" style="display: inline;">
+          <button type="submit">Vendi</button>
         </form>
       </li>
     <% }) %>
